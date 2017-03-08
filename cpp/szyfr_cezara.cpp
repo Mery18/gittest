@@ -14,8 +14,9 @@ void szyfruj(char, tekst[], int klucz){
     int i= 0; //indeks
     while (tekst[i] != '\0'){
         if((int)tekst[i] + klucz > 122)
-            tekst[i] =
-        i++
+            tekst[i] = (char)((int)tekst[i] + klucz - 26)
+        else
+         i++
     }
 }
 int main(int argc, char **argv)
