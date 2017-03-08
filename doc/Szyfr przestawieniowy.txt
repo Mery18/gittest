@@ -1,0 +1,35 @@
+Szyfr przestawieniowy
+
+TO BE OR NOT TO BE THAT IS THE QUESTION
+
+TOBEORNOTTOBETHATISTHEQUESTION
+
+klucz = 6
+
+TOBEOR
+NOTTOB
+ETHATI
+STHEQU
+ESTION
+
+Szyfrogram powstaje poprzez spisanie liter kolumnami:
+
+TNESEOOTTSBTHHT...
+
+Napisz program w dowolnym języku, który realizuje szyfrowanie przedstawione.
+
+1)pobiera tekst od uzytkownika
+2) usunąć biale znaki
+TOBEORNOTTOBETHATISTHEQUESTION
+3) Pobierz klucz
+klucz = 6
+4) Podziel tekst na części długości klucza
+Opcjonalnie:
+5a) Zapisz części jedna pod drugą
+5b) W petli odczytuj litery na kolejnych wielokrotnościach klucza
+Szyfrogram powstaje poprzez spisanie liter kolumnami:
+
+TNESEOOTTSBTHHT...
+6) wydrukuj zaszyfrowany tekst
+
+NA ZA TYDZIEŃ

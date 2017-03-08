@@ -13,11 +13,17 @@ def szyfruj_cezar(tekst, klucz):
             szyfrogram += chr(ord(znak) + klucz)
     return szyfrogram
 
+def deszyfruj_cezar(szyfrogram, klucz):
+    tekst = ""
+    pass
+    return tekst
 
 def main(args):
     tekst = raw_input("Podaj tekst: ")
     klucz = int(raw_input("Podaj klucz: "))
-    print szyfruj_cezar(tekst, klucz)
+    szyfrogram = szyfruj_cezar(tekst, klucz)
+    print szyfrogram
+    print dezyfruj_cezar(szyfrogram, klucz)
     return 0
 
 
