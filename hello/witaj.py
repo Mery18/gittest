@@ -4,8 +4,13 @@
 #  witaj.py
 #  
 #  
-    ROK_TERAZ = 2017
-    ROK_PYTHON = 1991
+ROK_TERAZ = 2017
+ROK_PYTHON = 1991
+
+def parzyste(n):
+    ile = list(range(0, n+1, 2))
+    print(ile)
+    return len(ile)
 
 def main(args):
     
@@ -22,6 +27,10 @@ def main(args):
         print("Jestem starszy")
     else:
         print("Mamy tyle samo lat!")
+    
+    n = int (input("Podaj liczbę: "))
+    print("Parzyste: ", parzyste(n))
+    
     
     return 0
 

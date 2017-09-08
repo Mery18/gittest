@@ -8,8 +8,17 @@
 
 using namespace std;
 
+int parzyste(int n)
+{
+    int i;
+    for (i=0; i <=n; i+=2)
+        cout<< i << " ";
+    return i/2; 
+}
+
 int main(int argc, char **argv)
 {
+    int n;
     
     char tekst[20];
     cout <<"Witaj. Jak się nazywasz?";
@@ -32,6 +41,12 @@ int main(int argc, char **argv)
     if( data == 2017 - lata)
     { cout << "Mamy tyle samo lat!"<< endl;
         }
+        
+    
+    cout << "Podaj liczbę: ";
+    cin >> n;
+    cout << "Parzystych: " << parzyste(n);
+    
     return 0;
 }
 
