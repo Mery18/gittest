@@ -16,46 +16,45 @@ class BazaModel(Model):
         database = baza
 
 class Klasa(BazaModel):
-    id = IntegerField(primary_key=True)
     klasa = CharField(null=False)
     rok_naboru = IntegerField(null=False)
     rok_matury = IntegerField(null=False)
 
 class Przedmiot(BazaModel):
-    id = IntegerField(primary_key=True)
     przedmiot = CharField(null=False)
-    nazwisko_naucz = CharField(null=False)
-    imie_naucz = CharField(null=False)
-    plec_naucz = IntegerField(null=False)
+    nazwiskon = CharField(null=False)
+    imien = CharField(null=False)
+    plecn = IntegerField(null=False)
 
 class Ocena(BazaModel):
-    id = IntegerField(primery_key=True)
     datad = DateField(null=False)
-    uczen = IntegerField(null=True)
-    przedmiot = IntegerField(null=True)
+    uczen_id = ForeignKeyField(Uczen, related_name='szkola')
+    przedmiot_id = ForeignKeyField(Przedmiot, related_name='szkola')
     ocena = DecimalField(null=True)
-    UczenID= ForeignKeyField(Uczen, related_name='szkola')
-    PrzedmiotID = ForeignKeyField(Pzredmiot, related_name='szkola')
 
 class Uczen(BazaModel):
-    id = IntegerField(primary_key=True)
     imie = CharFiel(null=False)
     nazwisko = CharFiel(null=False)
     plec = IntegerField(null=False)
-    klasa = IntegerField(null=True)
-    egzhum =
-    egzmat =
-    egzjez =
-    KlasaD = ForeignKeyField(Klasa, related_name='szkola')
-
-
-
-
+    klasa_id = ForeignKeyField(Klasa, related_name='szkola')
+    egzhum = IntegerField(null=True)
+    egzmat = IntegerField(null=True)
+    egzjez = IntegerField(null=True)
 
 
 
 
 baza.connect()
+
+def kwerenda_a():
+    query = (Dzial
+        .select(uczen.imie, uczen.nazwisko)
+        .group_by(klasa_id = "1A")
+    )
+    for obj in query:
+
+
+
 
 def kw_1(cur):
     cur.execute("""
