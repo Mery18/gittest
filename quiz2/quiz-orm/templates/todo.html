@@ -1,6 +1,16 @@
 # -*- coding: utf-8 -*-
 # quiz-orm/forms.py
 
+{% extends "szkielet.html" %}
+{% set active_page = "dodaj" %}
+{% block tytul %}Lista zadań{% endblock%}
+{% block h1 %}Quiz ORM &#8211; dodawanie zadań{% endblock%}
+{% block tresc %}
+{% endblock %}
+
+
+
+
 from flask_wtf import FlaskForm
 from wtforms import StringField, RadioField, HiddenField, FieldList
 from wtforms.validators import Required
@@ -26,5 +36,6 @@ class DodajForm(FlaskForm):
 
 
 class TodoForm(FlaskForm):
-    zadanie = StringField('Treść zadania: ',
-                          validators=[Required(message='Wpisz zadanie')])
+    zadanie = StringField('Treść zadania:',
+                            validators=[Required(message='Wpisz zadanie')]
+                          )
