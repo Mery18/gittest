@@ -1,0 +1,28 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-01-18T11:59:20+01:00
+
+====== Home ======
+Created czwartek 18 styczeń 2018
+
+**OOP -**  programowanie obiektów
+**programowanie obiektowe**
+	klasa -  szablon opisujący obiekt , schemat obiektu 
+	obiekt - instancja klasy
+		np. gra Diablo 
+		   **klasa** to nowy tyo danych
+	**konstruktor** iniciuje właściwości klasy
+	
+	
+	**w domu** 
+	//sprówbować metode klasy, ulamek //
+	//operacja skracania //
+	//w metodach publicznych //
+	//metoda skracań → trwale zmodyfikować lub zwrócić ułamke lub wydrukować //
+	
+	//przypomnię algorytm euklidesa w wersji optymalny  - wyszuka najwiekszy wspolny dzielnnik// 
+	
+	
+	
+
+
