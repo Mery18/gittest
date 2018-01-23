@@ -18,6 +18,15 @@ using namespace std;
             exit(1);
         }
 }
+
+void Ulamek::zapisz(int l, int m){
+    licznik = l;
+    if(m!= 0) mianownik =  m;
+    else {
+            cout << ",mianownik nie może być zerem!";
+            exit(1);
+        }
+    }
     
 void Ulamek::wypisz(){
     cout << licznik << "/" << mianownik;
