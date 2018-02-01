@@ -1,9 +1,9 @@
 CXX=g++
 CXXFLAGS=-Wall -I.
-OBJS=ul_ulamek.o ul_main.o
+OBJS=lista.o lista_main.o
 
-pong: ul_ulamek.o ul_main.o	
-	$(CXX) $(CXXFLAGS) $(OBJS) -o ul_main.exe
+pong: lista.o lista_main.o	
+	$(CXX) $(CXXFLAGS) $(OBJS) -o lista_main.exe
 	
 .PHONY: clean
 
