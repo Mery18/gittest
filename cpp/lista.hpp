@@ -14,7 +14,7 @@ class Lista {
     
     public: //interfejs publiczny (API klasy)
         Lista(); //konstruktor
-        ~Lista();//destruktor
+        ~Lista();//destruktor, posprzątanie po klasie 
         // memory leak
         void Dodaj(int);
         void Wyswietl();
