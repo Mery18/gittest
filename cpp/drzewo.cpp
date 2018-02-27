@@ -1,31 +1,15 @@
-/*
- * drzewo_bin.cpp
- * 
- * Copyright 2018  <>
- * 
- */
-
 #include <iostream>
+#include "drzewo.hpp"
 
-using namespace std;
-
-struct Wezel {
-    int wartosc;
-    Wezel *lewy;
-    Wezel *prawy;
-} *korzen = NULL; // definicja struktury i utworzenie wskaźnika korzen
-
-Wezel* stworzWezel(int wartosc) {
-    Wezel *nowyWezel = new Wezel;
-    nowyWezel->wartosc = wartosc;
-    nowyWezel->lewy = NULL;
-    nowyWezel->prawy = NULL;
-    
-    return nowyWezel;
+Wezel::Wezel(){
+    head = NULL;
+    tail = NULL;
 }
-
-void dodajWezel(Wezel *wezel, int wartosc) {
-    if (korzen == NULL) { // drzewo jest puste!
+Wezel::~Wezel(){
+   while(Usun()){;};
+}
+void Wezel::Dodaj(int wartosc){
+        if (korzen == NULL) { // drzewo jest puste!
         korzen = stworzWezel(wartosc); // utworzenie 1. elementu
     } else {
         if (wartosc < wezel->wartosc) { // wstawiamy wartość mniejszą // wstawiamy wartość do lewego poddrzewa 
@@ -43,34 +27,38 @@ void dodajWezel(Wezel *wezel, int wartosc) {
         }
     }
 }
-
-// funkcja rekurencyjnie przeglądająca drzewo 
-void wyswietlRosnoco(Wezel *wezel){
-    if (wezel != NULL) { // jeżeli węzeł nie jest pusty
+void Lista::Wyswietl(){
+     if (wezel != NULL) { // jeżeli węzeł nie jest pusty
         //rekurencyjnie wyswietl lewe poddrzewo
         wyswietlRosnoco(wezel ->lewy);
         // wypisz wartosc aktualnego węzła
         cout << wezel -> wartosc << ",";
         // rekurencyjnie wyswietl prawe poddrzewo
         wyswietlRosnoco(wezel ->prawy);
-    }
 }
 
-int main(int argc, char **argv)
-{
-	dodajWezel(korzen, 10);
-	dodajWezel(korzen, 8);
-	dodajWezel(korzen, 4);
-	dodajWezel(korzen, 9);
-	dodajWezel(korzen, 20);
-	dodajWezel(korzen, 16);
-	dodajWezel(korzen, 30);
-    cout << "posortowane drzewo (niemalejąco): ";
-    wyswietlRosnoco(korzen);
-    
-    delete korzen; //zwonienie wykporzystanej pamięci 
-    
-    
-	return 0;
+bool Lista::Usun(){
+     cout << "posortowane drzewo (niemalejąco): ";
+        wyswietlRosnoco(korzen);
+        
+        delete korzen; //zwonienie wykporzystanej pamięci 
 }
+    return false;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
