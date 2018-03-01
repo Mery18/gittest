@@ -21,7 +21,35 @@ lizcenie wyrażęń w onte
 klasa lista
 drzewo binarne 
 przekształcenie w wersje procuderalna w wersje 
-struktury dynamiczne  
+struktury dynamiczne 
+
+
+
+
+python 2.7.14/11 
+
+python - google
+
+dowlands --- windows — wersja 2.7.14
+
+windows x86-bitów/ lu b coś innego 
+
+
+
+python 101
+koduj z klasa
+system i op
+przygotowanie windows 
+zaznaczyć add python 2.7 to path
+
+zainstalować na dysku C pod nazwą Python27
+C:\Python36
+
+w domu z kategori robot game 
+wykorzystuje  my dane instrukcja
+
+
+pip install virtualenv 
 
 
 
